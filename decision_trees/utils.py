@@ -1,3 +1,5 @@
+import math
+
 def LoadData(file_name, num_lines=None):
   X = []
   Y = []
@@ -19,4 +21,10 @@ def Combine(Y, X):
   for i in xrange(len(Y)):
     data.append([Y[i]] + X[i])
   return data
+
+def Entropy(P, N):
+  eps = 0.001
+  den = P + N + eps
+  return -P * math.log((P+eps) / den, 2) - N * math.log((N+eps) / den, 2)
+
 

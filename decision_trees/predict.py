@@ -38,7 +38,7 @@ def PrintStats(tree):
 
 def main():
   
-  f = open('/Users/siddharths/quora_answered/week1/trained.1500.model')
+  f = open('/Users/siddharths/quora_answered/week1/trained.5000.model')
   tree = json.load(f)
   f.close()
 
